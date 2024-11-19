@@ -1,0 +1,29 @@
+body {
+    background-color: #00235a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+input[type="text"] {
+    padding: 5px;
+}
+
+.control-zone {
+    text-align: center;
+}
+
+.input-invalid {
+    border: 1px solid red;
+}

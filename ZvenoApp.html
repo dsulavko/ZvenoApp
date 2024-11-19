@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <h1>ZVENO 0.9</h1>
+    <table>
+        <tr>
+            <td>Игрок 1</td>
+            <td>Игрок 2</td>
+            <td>Игрок 3</td>
+            <td>Игрок 4</td>
+            <td>Игрок 5</td>
+            <td>Игрок 6</td>
+            <td>Игрок 7</td>
+            <td>Игрок 8</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="player1-name" disabled><input type="checkbox" id="player1-active"></td>
+            <td><input type="text" id="player2-name" disabled><input type="checkbox" id="player2-active"></td>
+            <td><input type="text" id="player3-name" disabled><input type="checkbox" id="player3-active"></td>
+            <td><input type="text" id="player4-name" disabled><input type="checkbox" id="player4-active"></td>
+            <td><input type="text" id="player5-name" disabled><input type="checkbox" id="player5-active"></td>
+            <td><input type="text" id="player6-name" disabled><input type="checkbox" id="player6-active"></td>
+            <td><input type="text" id="player7-name" disabled><input type="checkbox" id="player7-active"></td>
+            <td><input type="text" id="player8-name" disabled><input type="checkbox" id="player8-active"></td>
+        </tr>
+        <tr>
+            <td>Начинает раунд<input type="radio" id="player1-start" name="start" disabled></td>
+            <td>Начинает раунд<input type="radio" id="player2-start" name="start" disabled></td>
+            <td>Начинает раунд<input type="radio" id="player3-start" name="start" disabled></td>
+            <td>Начинает раунд<input type="radio" id="player4-start" name="start" disabled></td>
+            <td>Начинает раунд<input type="radio" id="player5-start" name="start" disabled></td>
+            <td>Начинает раунд<input type="radio" id="player6-start" name="start" disabled></td>
+            <td>Начинает раунд<input type="radio" id="player7-start" name="start" disabled></td>
+            <td>Начинает раунд<input type="radio" id="player8-start" name="start" disabled></td>
+        </tr>
+    </table>
+    <div class="control-zone">
+        <button id="start-button" disabled>Начать</button>
+    </div>
+<!-- New content block -->
+<div id="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+    <div id="player-name" style="font-size: 30px; font-weight: bold;"></div>
+    <div id="question-text" style="font-size: 26px;"></div>
+    <div id="answer-text" style="font-size: 26px;"></div>
+</div>
+</body>
+</html>

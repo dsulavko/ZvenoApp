@@ -39,13 +39,55 @@
         </tr>
     </table>
     <div class="control-zone">
-        <button id="start-button" disabled>Начать</button>
+        <button id="start-button" disabled>Начать Раунд</button>
+        <button id="end-button" style="margin-left: 20px;" disabled>Закончить Раунд</button>
     </div>
 <!-- New content block -->
-<div id="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+<div id="content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 400px;">
+    <div id="player-stats" style="display: none;"></div>
     <div id="player-name" style="font-size: 30px; font-weight: bold;"></div>
     <div id="question-text" style="font-size: 26px;"></div>
     <div id="answer-text" style="font-size: 26px;"></div>
+    <div id="buttons" style="display: none;">
+        <button id="bankButton" style="margin-right: 20px; padding: 10px; width: 150px; height: 50px;">
+            Банк
+        </button>
+        <button id="correctButton" style="margin-right: 20px; padding: 10px; width: 150px; height: 50px;">
+            Ответ правильный
+        </button>
+        <button id="incorrectButton" style="width: 150px; height: 50px;">
+            Ответ неправильный
+        </button>
+    </div>
+    <div id="values" style="display: none;">
+        <div id="value-1" class="value-box">
+            1000
+        </div>
+        <div id="value-2" class="value-box">
+            2000
+        </div>
+        <div id="value-3" class="value-box">
+            5000
+        </div>
+        <div id="value-4" class="value-box">
+            10000
+        </div>
+        <div id="value-5" class="value-box">
+            20000
+        </div>
+        <div id="value-6" class="value-box">
+            30000
+        </div>
+        <div id="value-7" class="value-box">
+            40000
+        </div>
+        <div id="value-8" class="value-box">
+            50000
+        </div>
+    </div>
 </div>
+<footer class="footer">
+    Банк: <span id="bank-value">0</span>
+</footer>
 </body>
 </html>

@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.getElementById("start-button").addEventListener('click', function() {   
+    startTimer();
     // Fetch player name from the corresponding text input
     let selectedRadioButtonId = document.querySelector('[name="start"]:checked').id;
     let playerNameInputId = selectedRadioButtonId.replace('-start', '-name');
@@ -113,6 +114,7 @@ document.getElementById("start-button").addEventListener('click', function() {
     document.getElementById('values').style.display = 'none';
     document.getElementById('player-name').style.display = 'block';
     document.getElementById('question-text').style.display = 'block';
+    document.getElementById('answer-text').style.display = 'block';
     document.getElementById('buttons').style.display = 'block';
     document.getElementById('values').style.display = 'flex';
     document.getElementById('player-stats').style.display = 'none';
@@ -153,6 +155,7 @@ function getNextQuestion() {
 
 
 document.getElementById('end-button').addEventListener('click', function() {  
+    resetTimer();
     // Hide elements
     document.getElementById('player-name').style.display = 'none';
     document.getElementById('question-text').style.display = 'none';
@@ -300,3 +303,35 @@ document.getElementById("bankButton").addEventListener('click', function() {
     currentRightAnswer = 1;
 
 });
+
+// Выбранное время в секундах
+let selectedTime = document.getElementById("round").value;
+
+function setTime() {
+  selectedTime = document.getElementById("round").value;
+}
+
+let timer;
+
+function startTimer() {
+  timer = setInterval(function() {
+    selectedTime--;
+    // Форматируем время в минуты и секунды
+    let minutes = Math.floor(selectedTime / 60);
+    let seconds = selectedTime % 60;
+    
+    // Выводим время
+    document.getElementById("timer").innerHTML = minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+      
+    // Если время истекло, останавливаем таймер
+    if (selectedTime <= 0) {
+      clearInterval(timer);
+      document.getElementById("timer").innerHTML = "TIME OUT";
+    }
+  }, 1000);
+}
+function resetTimer() {
+    clearInterval(timer);
+    document.getElementById("timer").innerHTML = "";
+    setTime(); // сбрасываем время до изначально выбранного
+  }

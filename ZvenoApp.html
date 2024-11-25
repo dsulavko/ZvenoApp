@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>ZVENO 0.9</h1>
+    <p id="timer" class="timerStyle"></p>
     <table>
         <tr>
             <td>Игрок 1</td>
@@ -39,6 +40,14 @@
         </tr>
     </table>
     <div class="control-zone">
+        <select id="round" onchange="setTime()">
+            <option value="150">Раунд 1. 2:30</option>
+            <option value="140">Раунд 2. 2:20</option>
+            <option value="130">Раунд 3. 2:10</option>
+            <option value="120">Раунд 4. 2:00</option>
+            <option value="110">Раунд 5. 1:50</option>
+            <option value="100">Раунд 6. 1:40</option>
+            <option value="90">Раунд 7. 1:30</option></select>
         <button id="start-button" disabled>Начать Раунд</button>
         <button id="end-button" style="margin-left: 20px;" disabled>Закончить Раунд</button>
     </div>
